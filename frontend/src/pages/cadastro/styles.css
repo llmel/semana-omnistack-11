@@ -1,0 +1,57 @@
+.cadastro-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;  /* Conteúdo sempre centralizado na tela */ 
+
+    display: flex; /* Faz com que todos os itens dentro deste container fiquem um do lado do outro */
+    align-items: center;   /* Alinha verticalmente no centro */
+    justify-content: center;   /* Alinha horizontalmente no centro */
+}
+
+.cadastro-container .content {
+    width: 100%;
+    padding: 96px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0,0,0,1);
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;   /* Separa a section e o form, colocando um em cada extremo, com um espaço entre eles */
+    align-items: center;
+}
+
+.cadastro-container .content section {
+    width: 100%;
+    max-width: 380px;
+}
+
+.cadastro-container .content section h1 {
+    margin: 64px 0 32px;
+    font-size: 32px;
+}
+
+.cadastro-container .content section p {
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px;
+}
+
+.cadastro-container .content form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.cadastro-container .content form input {
+    margin-top: 8px;
+}
+
+.cadastro-container .content form .input-group {
+    display: flex;
+}
+
+/* Todo input que tenha um input antes */
+.cadastro-container .content form .input-group input + input {
+    margin-left: 8px;
+}
+

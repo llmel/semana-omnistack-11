@@ -2,6 +2,9 @@
 // Essa variável contém todas as funcionalidades do módulo.
 const express = require('express');
 
+// Importando validador Celebrate
+const { errors } = require('celebrate');
+
 // Importando o módulo de rotas, que é exportado pelo arquivo routes.js
 const routes = require('./routes');
 
@@ -21,8 +24,14 @@ app.use(express.json());
 // Este comando tem que estar após o 'use express.json'
 app.use(routes);
 
+// Usando o validador Celebrate
+app.use(errors());
+
 // Qual porta a aplicação vai rodar
-app.listen(3333);
+// app.listen(3333);
+
+// Funcionalidade Avançada
+module.exports = app;
 
 // Primeiras rotas
 // Retornando texto

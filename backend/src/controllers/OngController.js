@@ -1,7 +1,7 @@
 // Conexão com o banco de dados
 const conexao = require('../database/conexao');
-// Módulo de Criptografia - Apenas para gerar IDs aleatórios
-const crypto = require('crypto');
+// Importando função da pasta "Utils"
+const generateUniqueId = require('../utils/generateUniqueId');
 
 module.exports = {
     async index (req,res)  {
@@ -16,7 +16,7 @@ module.exports = {
         const {nome,email,whatsapp,cidade,uf} = req.body;
     
         // Gerar id aleatório
-        const id = crypto.randomBytes(4).toString('HEX');
+        const id = generateUniqueId();
     
         await conexao('ongs').insert({
             id,
